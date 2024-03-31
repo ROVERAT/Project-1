@@ -8,51 +8,30 @@ public class ButonEmiter : MonoBehaviour
     public Image image;
     public Sprite[] sprite;
     public int num;
+    private bool ismuwe;
+    public void Awake()
+    {
+        
+    }
+    public void Resed() 
+    {
+        transform.localPosition = Vector2.zero;
+        ismuwe = false;
+    }
 
-    public void UpLevel() 
-    {
-        if (num == 0) 
-        {
-            num = 1;
-        }
-    }
-    public void MuweLevel() 
-    {
-        if (num > 0) 
-        {
-            if (CursorPosition.rid.names != gameObject.name)
-            {
-                if (num == CursorPosition.rid.num)
-                {
-                    num += 1;
-                    CursorPosition.rid.be.num = 0;
-                }
-                else
-                {
-                    num = CursorPosition.rid.num;
-                    CursorPosition.rid.Resed();
-                }
-            }
-            else
-            {
-                num = CursorPosition.rid.num;
-                CursorPosition.rid.Resed();
-            }
-        }
-    }
     public void Muve() 
     {
-        if (num >= 1)
-        {
-            CursorPosition.rid.be = this;
-            CursorPosition.rid.num = num;
-            CursorPosition.rid.img.sprite = image.sprite;
-            CursorPosition.rid.names = gameObject.name;
-            num = 0;
-        }
+        ismuwe = true;
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        image.sprite = sprite[num];
+        if (ismuwe)
+        {
+            transform.position = Input.mousePosition;
+        }
+        else 
+        {
+
+        }
     }
 }
