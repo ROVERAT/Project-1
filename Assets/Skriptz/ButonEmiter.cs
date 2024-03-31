@@ -9,10 +9,7 @@ public class ButonEmiter : MonoBehaviour
     public Sprite[] sprite;
     public int num;
     private bool ismuwe;
-    public void Awake()
-    {
-        
-    }
+
     public void Resed() 
     {
         transform.localPosition = Vector2.zero;
