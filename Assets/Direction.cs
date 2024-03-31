@@ -6,13 +6,11 @@ public class Direction : MonoBehaviour
 {
 
     public float speed;
-    public Vector2 direction;
-    
+    public Vector3 direction;
 
-    void FixedUpdate()
+
+    private void Update()
     {
-
-    transform.Translate(speed * direction * Time.deltaTime, Space.World);
-    
+        transform.position += direction * speed * Time.deltaTime;
     }
 }

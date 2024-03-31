@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grunder : MonoBehaviour
 {
     public bool isPeshka;
-    private void Awake()
+    private void Start()
     {
         Spavner.rid.poses.Add(transform);
     }

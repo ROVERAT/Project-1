@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class ButonEmiter : MonoBehaviour
 {
-    public Image image;
-    public Sprite[] sprite;
-    public int num;
+    public Collider2D other;
+    public LayerMask mask;
+    public int lvl;
     private bool ismuwe;
-
+    private Transform parent;
     public void Resed() 
     {
         transform.localPosition = Vector2.zero;
@@ -20,6 +20,20 @@ public class ButonEmiter : MonoBehaviour
     {
         ismuwe = true;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Peshka" && (ismuwe)) 
+        {
+            other = collision;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Peshka" && (ismuwe))
+        {
+            other = null;
+        }
+    }
     private void Update()
     {
         if (ismuwe)
@@ -28,7 +42,23 @@ public class ButonEmiter : MonoBehaviour
         }
         else 
         {
-
+            if (other != null)
+            {
+                if (other.GetComponent<ButonEmiter>().lvl == lvl)
+                {
+                    Destroy(other.gameObject);
+                    lvl += 1;
+                }
+                else 
+                {
+                    transform.parent = parent;
+                    Resed();
+                }
+            }
+            else 
+            {
+                parent = transform.parent;
+            }
         }
     }
 }

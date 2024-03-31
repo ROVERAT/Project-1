@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform SpawnPos;
-    public GameObject Cube;
-
+    public float interval;
+    public GameObject cube;
+    public Vector2 direction;
     void Start()
     {
         StartCoroutine(SpawnCD());
@@ -19,8 +19,12 @@ public class Spawner : MonoBehaviour
     }
     IEnumerator SpawnCD()
     {
-        yield return new WaitForSeconds(1f);
-        Instantiate(Cube, SpawnPos.position, Quaternion.identity);
+        yield return new WaitForSeconds(interval);
+        Direction monster = Instantiate(cube).GetComponent<Direction>();
+        monster.transform.position = transform.position;
+        monster.transform.parent = transform;
+        monster.speed = 100;
+        monster.direction = direction;
         Repeat();
     }
 }
