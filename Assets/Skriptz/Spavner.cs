@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spavner : MonoBehaviour
 {
     public GameObject peshka;
-    public List<Transform> poses;
+    public List<Transform> poses, enemies;
     public static Spavner rid { get; set; }
 
     void Awake()

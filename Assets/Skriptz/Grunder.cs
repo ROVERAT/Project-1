@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Grunder : MonoBehaviour
 {
-    public bool isPeshka;
     private void Start()
     {
         Spavner.rid.poses.Add(transform);
@@ -13,7 +12,6 @@ public class Grunder : MonoBehaviour
     {
         if (collision.tag == "Peshka") 
         {
-            collision.transform.parent = transform;
             Spavner.rid.poses.Remove(transform);
         }
     }
@@ -22,6 +20,13 @@ public class Grunder : MonoBehaviour
         if (collision.tag == "Peshka")
         {
             Spavner.rid.poses.Add(transform);
+        }
+    }
+    private void FixedUpdate()
+    {
+        if (transform.childCount != 0) 
+        {
+            Spavner.rid.poses.Remove(transform);
         }
     }
 }

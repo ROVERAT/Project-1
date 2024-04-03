@@ -25,6 +25,7 @@ public class Spawner : MonoBehaviour
         monster.transform.parent = transform;
         monster.speed = 100;
         monster.direction = direction;
+        Spavner.rid.enemies.Add(monster.transform);
         Repeat();
     }
 }

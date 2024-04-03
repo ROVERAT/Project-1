@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using UnityEditor.Sprites;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButonEmiter : MonoBehaviour
 {
+    public RectTransform looker;
+    public Image figure;
+    public Sprite[] sprite;
     public Collider2D other;
     public LayerMask mask;
     public int lvl;
@@ -36,6 +41,11 @@ public class ButonEmiter : MonoBehaviour
     }
     private void Update()
     {
+        figure.sprite = sprite[lvl];
+        if (Spavner.rid.enemies.Count > 0) 
+        {
+            looker.LookAt(Spavner.rid.enemies[0].position);
+        }
         if (ismuwe)
         {
             transform.position = Input.mousePosition;
@@ -46,8 +56,16 @@ public class ButonEmiter : MonoBehaviour
             {
                 if (other.GetComponent<ButonEmiter>().lvl == lvl)
                 {
-                    Destroy(other.gameObject);
-                    lvl += 1;
+                    if (lvl < sprite.Length - 1)
+                    {
+                        Destroy(gameObject);
+                        other.GetComponent<ButonEmiter>().lvl += 1;
+                        Spavner.rid.poses.Add(parent);
+                    }
+                    else {
+                        transform.parent = parent;
+                        Resed();
+                    }
                 }
                 else 
                 {

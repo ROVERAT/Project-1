@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
@@ -8,6 +9,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.tag == "Monster")
         {
+            Spavner.rid.enemies.Remove(collision.transform);
             Destroy(collision.gameObject);
         }
     }
