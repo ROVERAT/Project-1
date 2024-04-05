@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class ButonEmiter : MonoBehaviour
 {
+    public Color[] collor;
+    public GameObject[] tipePeshka;
     public RectTransform looker;
     public Image figure;
     public Sprite[] sprite;
@@ -15,12 +17,33 @@ public class ButonEmiter : MonoBehaviour
     public int lvl;
     private bool ismuwe;
     private Transform parent;
+
+    private void Start()
+    {
+        RandoMaiser();
+    }
     public void Resed() 
     {
         transform.localPosition = Vector2.zero;
         ismuwe = false;
     }
 
+    public void RandoMaiser() 
+    {
+        int num = Random.Range(0, collor.Length);
+        figure.color = collor[num];
+        for (int i = 0; i < tipePeshka.Length; i++) 
+        {
+            if (i == num)
+            {
+                tipePeshka[i].SetActive(true);
+            }
+            else 
+            {
+                tipePeshka[i].SetActive(false);
+            }
+        }
+    }
     public void Muve() 
     {
         ismuwe = true;
@@ -60,6 +83,7 @@ public class ButonEmiter : MonoBehaviour
                     {
                         Destroy(gameObject);
                         other.GetComponent<ButonEmiter>().lvl += 1;
+                        other.GetComponent<ButonEmiter>().RandoMaiser();
                         Spavner.rid.poses.Add(parent);
                     }
                     else {
