@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2298613444670782437
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ba2a29e4b1c851c48b17b8a9b72273f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 367cfbed5d4d2de49ad8cca9e0628367, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -85,11 +85,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5226365456831227145}
-  - component: {fileID: 414438580023801848}
   - component: {fileID: 1847947467}
   - component: {fileID: -1416370870433735905}
   m_Layer: 5
-  m_Name: Svord
+  m_Name: Bulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,27 +115,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &414438580023801848
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7954593539918572988}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f09041974a17d7c468b5b2bc5e359abe, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1847947467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be99a77b4944e5409606eba6e92d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damag: 0
   speed: 700
 --- !u!61 &-1416370870433735905
 BoxCollider2D:

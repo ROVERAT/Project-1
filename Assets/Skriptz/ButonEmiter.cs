@@ -17,7 +17,7 @@ public class ButonEmiter : MonoBehaviour
     public int lvl, num;
     public bool ismuwe;
     private Transform parent;
-
+    public List <GameObject> peshki;
     private void Start()
     {
        RandoMaiser();
@@ -25,6 +25,11 @@ public class ButonEmiter : MonoBehaviour
     
     private void FixedUpdate()
     {
+        if (peshki.Count > 1) 
+        {
+            Destroy(peshki[0]);
+            peshki.RemoveAt(0);
+        }
         if (!ismuwe) 
         {
             if (Aura.rid.lvl == lvl && Aura.rid.num == num)
@@ -53,17 +58,11 @@ public class ButonEmiter : MonoBehaviour
     {
         num = Random.Range(0, collor.Length);
         figure.color = collor[num];
-        for (int i = 0; i < tipePeshka.Length; i++) 
-        {
-            if (i == num)
-            {
-                tipePeshka[i].SetActive(true);
-            }
-            else 
-            {
-                tipePeshka[i].SetActive(false);
-            }
-        }
+        GameObject p = Instantiate(tipePeshka[num]);
+        p.transform.parent = looker;
+        p.transform.localPosition = Vector3.zero;
+        p.transform.localEulerAngles = new Vector3(0, 90, -90);
+        peshki.Add(p);
     }
     public void Muve() 
     {
@@ -85,7 +84,7 @@ public class ButonEmiter : MonoBehaviour
             other = null;
         }
     }
-    
+
     private void Update()
     {
         if (!ismuwe) 
