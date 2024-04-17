@@ -7,6 +7,7 @@ public class Spavner : MonoBehaviour
 {
     public Color first, dan;
     public Text manna, keshManna;
+    public Text[] lvles;
     public GameObject peshka;
     public Parameters parameters;
     public List<Transform> poses, enemies;
@@ -29,6 +30,10 @@ public class Spavner : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        for (int i = 0; i < lvles.Length; i++) 
+        {
+            lvles[i].text = "" + parameters.lvls[i];
+        }
         if (parameters.manna >= tcena)
         {
             keshManna.color = first;
@@ -40,6 +45,15 @@ public class Spavner : MonoBehaviour
         tcena = 40 + (parameters.tcena * 10);
         keshManna.text = "" + tcena;
         manna.text = "" + parameters.manna;
+    }
+    public void LvlUp(int num) 
+    {
+        int tcena = parameters.lvls[num] * 100;
+        if (parameters.manna >= tcena) 
+        {
+            parameters.lvls[num] += 1;
+            parameters.manna -= tcena;
+        }
     }
     public void Spawn() 
     {

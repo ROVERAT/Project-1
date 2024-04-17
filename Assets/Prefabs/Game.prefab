@@ -125,12 +125,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1445815309572867648}
         m_TargetAssemblyTypeName: Spavner, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
+        m_MethodName: LvlUp
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -728,12 +728,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1445815309572867648}
         m_TargetAssemblyTypeName: Spavner, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
+        m_MethodName: LvlUp
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -943,8 +943,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1445815309572867648}
         m_TargetAssemblyTypeName: Spavner, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
+        m_MethodName: LvlUp
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1234,12 +1234,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1445815309572867648}
         m_TargetAssemblyTypeName: Spavner, Assembly-CSharp
-        m_MethodName: Spawn
-        m_Mode: 1
+        m_MethodName: LvlUp
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2169,6 +2169,11 @@ MonoBehaviour:
   dan: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
   manna: {fileID: 469461468}
   keshManna: {fileID: 1445815310500025767}
+  lvles:
+  - {fileID: 1547666197}
+  - {fileID: 816876179}
+  - {fileID: 1184540198}
+  - {fileID: 733653189}
   peshka: {fileID: 2304117875469333626, guid: 6eba9d687ff8a074fa008c74f00a163d, type: 3}
   parameters: {fileID: 11400000, guid: 3140f0d9d4fd28c4581c9ab40324f7f6, type: 2}
   poses: []

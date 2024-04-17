@@ -379,7 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98315cee0b82c6446aa31b7e6b765931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parameters: {fileID: 11400000, guid: 3140f0d9d4fd28c4581c9ab40324f7f6, type: 2}
+  emiter: {fileID: 0}
+  damag: 10
+  identificator: 1
+  speed: 0.2
   bullet: {fileID: 7954593539918572988, guid: cd8f0bddf9c13d74b9182d583b2e3586, type: 3}
   anim: {fileID: 2564565484440617394}
-  damag: 10
-  interval: 1
