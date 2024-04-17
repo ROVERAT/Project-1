@@ -211,11 +211,7 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 1, b: 0.11850643, a: 1}
   - {r: 1, g: 0.794463, b: 0, a: 1}
-  tipePeshka:
-  - {fileID: 7551797821795570784, guid: 10347f157213f3a4b8214eddf1d5f3c2, type: 3}
-  - {fileID: 7300339424937062072, guid: 0c1b624824b86f346bdc4e833ab8c164, type: 3}
-  - {fileID: 3877870157447640218, guid: 0470b4773c3225745aca868199204e4a, type: 3}
-  - {fileID: 7551797821795570784, guid: 7271dae941da63d4faaa2bc1fa076fee, type: 3}
+  parameters: {fileID: 11400000, guid: 3140f0d9d4fd28c4581c9ab40324f7f6, type: 2}
   looker: {fileID: 465286242244010964}
   figure: {fileID: 561351041603973536}
   sprite:

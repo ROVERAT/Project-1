@@ -8,7 +8,7 @@ public class ButonEmiter : MonoBehaviour
 {
     public Image aura;
     public Color[] collor;
-    public GameObject[] tipePeshka;
+    public Parameters parameters;
     public RectTransform looker;
     public Image figure;
     public Sprite[] sprite;
@@ -58,7 +58,7 @@ public class ButonEmiter : MonoBehaviour
     {
         num = Random.Range(0, collor.Length);
         figure.color = collor[num];
-        GameObject p = Instantiate(tipePeshka[num]);
+        GameObject p = Instantiate(parameters.peshki[num]);
         p.transform.parent = looker;
         p.transform.localPosition = Vector3.zero;
         p.transform.localEulerAngles = new Vector3(0, 90, -90);
