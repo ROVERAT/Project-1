@@ -32,7 +32,7 @@ public class Spavner : MonoBehaviour
     {
         for (int i = 0; i < lvles.Length; i++) 
         {
-            lvles[i].text = "" + parameters.lvls[i];
+            lvles[i].text = "" + parameters.lvls[i]*100;
         }
         if (parameters.manna >= tcena)
         {
@@ -63,8 +63,9 @@ public class Spavner : MonoBehaviour
             {
                 int num = Random.Range(0, poses.Count);
                 Transform pos = Instantiate(peshka).transform;
-                pos.parent = poses[num].transform;
-                pos.localPosition = Vector2.zero;
+                pos.SetParent(poses[num].transform, false);
+               // pos.parent = poses[num].transform;
+               pos.localPosition = Vector2.zero;
                 parameters.manna -= tcena;
                 parameters.tcena += 1;
             }

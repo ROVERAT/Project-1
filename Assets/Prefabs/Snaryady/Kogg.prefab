@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 944cd86354f88a7439a6275654b9d5ce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46ed618ddea2ee84ca7ad22c25d70621, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be99a77b4944e5409606eba6e92d628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damag: 0
   speed: 700
 --- !u!61 &8559973641632591772
 BoxCollider2D:

@@ -14,13 +14,14 @@ public class Shuter : MonoBehaviour
     private void Start()
     {
         emiter = GetComponentInParent<ButonEmiter>();
+        transform.localScale = new Vector3(1,1,1);
     }
     public void Shut() 
     {
         Transform bulet = Instantiate(bullet).transform;
-        bulet.position = transform.position;
-        bulet.rotation = transform.rotation;
-        bulet.parent = transform;
+        bulet.localPosition = Vector3.zero;
+        bulet.localEulerAngles = Vector3.zero;
+        bulet.SetParent(transform, false);
         bulet.GetComponent<Snaryad>().damag = damag;
     }
     private void FixedUpdate()

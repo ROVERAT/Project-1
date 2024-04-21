@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using UnityEditor.Sprites;
 using UnityEngine;
 using UnityEngine.UI;
 public class ButonEmiter : MonoBehaviour
@@ -59,7 +58,8 @@ public class ButonEmiter : MonoBehaviour
         num = Random.Range(0, collor.Length);
         figure.color = collor[num];
         GameObject p = Instantiate(parameters.peshki[num]);
-        p.transform.parent = looker;
+        p.transform.SetParent(looker, false);
+        //p.transform.parent = looker;
         p.transform.localPosition = Vector3.zero;
         p.transform.localEulerAngles = new Vector3(0, 90, -90);
         peshki.Add(p);

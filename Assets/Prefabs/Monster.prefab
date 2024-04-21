@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 4955393922638018932}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.1}
-  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2458319474237578265}
@@ -107,7 +107,7 @@ RectTransform:
   m_GameObject: {fileID: 6879712713300274413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6668470799708052357}
@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ba3c8853205d64697f02896cec0938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nagrada: 10
+  parameters: {fileID: 11400000, guid: 3140f0d9d4fd28c4581c9ab40324f7f6, type: 2}
   blood: {fileID: 6256345101996349645, guid: d88bdf8b1493e6c419d3893bdca21c5c, type: 3}
   anim: {fileID: 2675744749334423470}
   hp: 20

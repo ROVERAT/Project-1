@@ -241,9 +241,7 @@ GameObject:
   - component: {fileID: 7426458185099791889}
   - component: {fileID: 841765066915649912}
   - component: {fileID: 1028315942296622375}
-  - component: {fileID: 7786745207086646276}
   - component: {fileID: 7433869152610850130}
-  - component: {fileID: -4682774216274789634}
   m_Layer: 5
   m_Name: Iron
   m_TagString: Untagged
@@ -313,18 +311,6 @@ MonoBehaviour:
   speed: 0.2
   bullet: {fileID: 7954593539918572988, guid: 7b03618aca017ec44b70a3b51e2c893a, type: 3}
   anim: {fileID: 841765066915649912}
---- !u!114 &7786745207086646276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3877870157447640218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68a84f463e053c84e9bdc74ea79d9fe3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &7433869152610850130
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -333,44 +319,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3877870157447640218}
   m_CullTransparentMesh: 1
---- !u!114 &-4682774216274789634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3877870157447640218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67767bf00ceaee544892741cf8f89917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aura: {fileID: 6976217848376614615, guid: 6eba9d687ff8a074fa008c74f00a163d, type: 3}
-  collor:
-  - {r: 0.5254902, g: 0, b: 1, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0.11850643, a: 1}
-  - {r: 1, g: 0.794463, b: 0, a: 1}
-  parameters: {fileID: 11400000, guid: 3140f0d9d4fd28c4581c9ab40324f7f6, type: 2}
-  looker: {fileID: 465286242244010964, guid: 6eba9d687ff8a074fa008c74f00a163d, type: 3}
-  figure: {fileID: 561351041603973536, guid: 6eba9d687ff8a074fa008c74f00a163d, type: 3}
-  sprite:
-  - {fileID: -1535876560, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: -1956626106, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: 108039342, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: 899700573, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: 1929434041, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: -1953640115, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: -1936439169, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  - {fileID: -853997284, guid: d039268df53d8fc4e8b0ea024b6097d0, type: 3}
-  other: {fileID: 0}
-  mask:
-    serializedVersion: 2
-    m_Bits: 8
-  lvl: 0
-  num: 0
-  ismuwe: 0
-  peshki: []
 --- !u!1 &5062528304577280962
 GameObject:
   m_ObjectHideFlags: 0

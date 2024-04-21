@@ -23,5 +23,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 5e3612b1637a69341b79f4f520f8fbce, type: 3}
   - {fileID: 21300000, guid: 627e2aef4c213d04583f5402c24cc331, type: 3}
   lvls: 01000000010000000100000001000000
-  tcena: 16
-  manna: 997760
+  tcena: 1
+  manna: 140

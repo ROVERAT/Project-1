@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HP : MonoBehaviour
 {
+    public int nagrada = 10;
+    public Parameters parameters;
     public GameObject blood;
     public Animator anim;
     public int hp = 100;
@@ -23,7 +25,10 @@ public class HP : MonoBehaviour
     void Ded() 
     {
         Spavner.rid.enemies.Remove(transform);
-        Instantiate(blood, transform.position, Quaternion.identity);
+        Destroyer des = Instantiate(blood).GetComponent<Destroyer>();
+        des.transform.SetParent(Spawner.rid.transform, false);
+        des.transform.localPosition = transform.localPosition;
+        parameters.manna += nagrada;
         Destroy(gameObject);
     }
 }
